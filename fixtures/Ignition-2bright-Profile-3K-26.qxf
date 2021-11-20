@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FixtureDefinition>
+<FixtureDefinition xmlns="http://www.qlcplus.org/FixtureDefinition">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>4.12.3</Version>
+  <Author>Rodolphe Dejeunes</Author>
+ </Creator>
+ <Manufacturer>Ignition</Manufacturer>
+ <Model>2bright Profile 3K 26°</Model>
+ <Type>Color Changer</Type>
+ <Channel Name="Dimmer" Preset="IntensityDimmer"/>
+ <Channel Name="Strobe (2ch-mode)">
+  <Group Byte="0">Shutter</Group>
+  <Capability Min="0" Max="5" Preset="LampOff">LED off</Capability>
+  <Capability Min="6" Max="255" Preset="StrobeFreqRange" Res1="1" Res2="20">Strobe effect, increasing speed (1..20Hz)</Capability>
+ </Channel>
+ <Channel Name="Strobe (4ch-mode)">
+  <Group Byte="0">Shutter</Group>
+  <Capability Min="0" Max="5" Preset="LampOff">LED off</Capability>
+  <Capability Min="6" Max="10" Preset="LampOn">LED on</Capability>
+  <Capability Min="11" Max="33" Preset="PulseSlowToFast">Random impulses, increasing speed</Capability>
+  <Capability Min="34" Max="56" Preset="RampUpSlowToFast">Randomly increasing brightness, increasing speed</Capability>
+  <Capability Min="57" Max="79" Preset="RampDownSlowToFast">Randomly decreasing brightness, increasing speed</Capability>
+  <Capability Min="80" Max="102" Preset="StrobeRandomSlowToFast">Random strobe effect, increasing speed</Capability>
+  <Capability Min="103" Max="127" Preset="StrobeFreqRange" Res1="0.2" Res2="1">Strobe break effect, 5s ... 1s</Capability>
+  <Capability Min="128" Max="250" Preset="StrobeFreqRange" Res1="1" Res2="20">Strobe effect, increasing speed (1...20Hz)</Capability>
+  <Capability Min="251" Max="255" Preset="LampOff">LED off</Capability>
+ </Channel>
+ <Channel Name="Dimmer mode">
+  <Group Byte="0">Maintenance</Group>
+  <Capability Min="0" Max="5">No function</Capability>
+  <Capability Min="6" Max="127">Dimmer setting for LED</Capability>
+  <Capability Min="128" Max="255">Imitation of the dimming behaviour for halogen light</Capability>
+ </Channel>
+ <Channel Name="Dimmer curve">
+  <Group Byte="0">Maintenance</Group>
+  <Capability Min="0" Max="5">No function</Capability>
+  <Capability Min="6" Max="63">Linear course</Capability>
+  <Capability Min="64" Max="127">Exponential course</Capability>
+  <Capability Min="128" Max="191">Logarithmic course</Capability>
+  <Capability Min="192" Max="255">S-shaped course</Capability>
+ </Channel>
+ <Mode Name="1-channel mode">
+  <Channel Number="0">Dimmer</Channel>
+ </Mode>
+ <Mode Name="2-channel mode">
+  <Channel Number="0">Dimmer</Channel>
+  <Channel Number="1">Strobe (2ch-mode)</Channel>
+ </Mode>
+ <Mode Name="4-ch mode">
+  <Channel Number="0">Dimmer</Channel>
+  <Channel Number="1">Strobe (4ch-mode)</Channel>
+  <Channel Number="2">Dimmer mode</Channel>
+  <Channel Number="3">Dimmer curve</Channel>
+ </Mode>
+ <Physical>
+  <Bulb Type="LED" Lumens="0" ColourTemperature="3000"/>
+  <Dimensions Weight="6" Width="230" Height="230" Depth="700"/>
+  <Lens Name="PC" DegreesMin="26" DegreesMax="26"/>
+  <Focus Type="Fixed" PanMax="0" TiltMax="0"/>
+  <Technical PowerConsumption="230" DmxConnector="3-pin"/>
+ </Physical>
+</FixtureDefinition>

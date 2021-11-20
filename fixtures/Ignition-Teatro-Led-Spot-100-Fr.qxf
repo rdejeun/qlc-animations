@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FixtureDefinition>
+<FixtureDefinition xmlns="http://www.qlcplus.org/FixtureDefinition">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>4.12.3</Version>
+  <Author>Rodolphe Dejeunes</Author>
+ </Creator>
+ <Manufacturer>Ignition</Manufacturer>
+ <Model>Teatro Led Spot 100 Fr</Model>
+ <Type>Color Changer</Type>
+ <Channel Name="Dimmer (2ch mode)" Preset="IntensityDimmer"/>
+ <Channel Name="Zoom (2ch mode)" Preset="BeamZoomSmallBig"/>
+ <Channel Name="Shutter">
+  <Group Byte="0">Shutter</Group>
+  <Capability Min="0" Max="9">Black-out</Capability>
+  <Capability Min="10" Max="19">Open</Capability>
+  <Capability Min="20" Max="29">Black-out</Capability>
+  <Capability Min="30" Max="119">Strobe (from 3s to 30ms)</Capability>
+  <Capability Min="120" Max="149">Pulse up (from 42s to 120ms)</Capability>
+  <Capability Min="150" Max="179">Pulse down (from 42s to 120ms)</Capability>
+  <Capability Min="180" Max="229">Random strobe</Capability>
+  <Capability Min="230" Max="235">Single flash 30ms</Capability>
+  <Capability Min="236" Max="255">Open</Capability>
+ </Channel>
+ <Channel Name="Dimmer" Preset="IntensityDimmer"/>
+ <Channel Name="Dimmer fine" Preset="IntensityDimmerFine"/>
+ <Channel Name="Functions (staying on desire option for 5 seconds)">
+  <Group Byte="0">Maintenance</Group>
+  <Capability Min="0" Max="14">No function</Capability>
+  <Capability Min="15" Max="24">Smooth Off</Capability>
+  <Capability Min="25" Max="26">Smooth 1 (25 ms)</Capability>
+  <Capability Min="27" Max="28">Smooth 2 (50 ms)</Capability>
+  <Capability Min="29" Max="30">Smooth 3 (75 ms)</Capability>
+  <Capability Min="31" Max="32">Smooth 4 (100 ms) [Default]</Capability>
+  <Capability Min="33" Max="34">Smooth 5 (125 ms)</Capability>
+  <Capability Min="35" Max="36">Smooth 6 (150 ms)</Capability>
+  <Capability Min="37" Max="38">Smooth 7 (175 ms)</Capability>
+  <Capability Min="39" Max="40">Smooth 8 (200 ms)</Capability>
+  <Capability Min="41" Max="42">Smooth 9 (225 ms)</Capability>
+  <Capability Min="43" Max="44">Smooth 10 (250 ms)</Capability>
+  <Capability Min="45" Max="46">Smooth 11 (275 ms)</Capability>
+  <Capability Min="47" Max="48">Smooth 12 (300 ms)</Capability>
+  <Capability Min="49" Max="50">Smooth 13 (325 ms)</Capability>
+  <Capability Min="51" Max="52">Smooth 14 (350 ms)</Capability>
+  <Capability Min="53" Max="54">Smooth 15 (375 ms)</Capability>
+  <Capability Min="55" Max="56">Smooth 16 (400 ms)</Capability>
+  <Capability Min="57" Max="58">Smooth 17 (425 ms)</Capability>
+  <Capability Min="59" Max="60">Smooth 18 (450 ms)</Capability>
+  <Capability Min="61" Max="62">Smooth 19 (475 ms)</Capability>
+  <Capability Min="63" Max="64">Smooth 20 (500 ms)</Capability>
+  <Capability Min="65" Max="74">Gamma correction = Quadratic [Default]</Capability>
+  <Capability Min="75" Max="84">Gamma correction = Linear</Capability>
+  <Capability Min="85" Max="104">Output frequency 610 Hz [Default]</Capability>
+  <Capability Min="105" Max="134">Output frequency (from 800 Hz to 20kHz)</Capability>
+  <Capability Min="135" Max="144">Boost = On [Default]</Capability>
+  <Capability Min="145" Max="154">Boost = Off</Capability>
+  <Capability Min="155" Max="164">Display stand-by = Off [Default]</Capability>
+  <Capability Min="165" Max="174">Display stand-by = On</Capability>
+  <Capability Min="175" Max="176">No DMX action = Keep last DMX [Default]</Capability>
+  <Capability Min="177" Max="178">No DMX action = Black-out</Capability>
+  <Capability Min="179" Max="180">No DMX action = Led On @ 100% (zoom @ 50%)</Capability>
+  <Capability Min="181" Max="182">No DMX action = Led On @ 60% (zoom @ 50%)</Capability>
+  <Capability Min="183" Max="184">No DMX action = Custom (see manual)</Capability>
+  <Capability Min="185" Max="234">Reserved</Capability>
+  <Capability Min="235" Max="239">Fan mode = Standard</Capability>
+  <Capability Min="240" Max="244">Fan mode = Silent [Default]</Capability>
+  <Capability Min="245" Max="248">Zoom mode = Standard</Capability>
+  <Capability Min="249" Max="252">Zoom mode = Silent [Default]</Capability>
+  <Capability Min="253" Max="255">Set default values (see manual)</Capability>
+ </Channel>
+ <Channel Name="Zoom" Preset="BeamZoomSmallBig"/>
+ <Channel Name="Zoom reset">
+  <Group Byte="0">Maintenance</Group>
+  <Capability Min="0" Max="15">No function</Capability>
+  <Capability Min="16" Max="255">Zoom reset (after 3 sec)</Capability>
+ </Channel>
+ <Mode Name="2 channels mode">
+  <Channel Number="0">Dimmer (2ch mode)</Channel>
+  <Channel Number="1">Zoom (2ch mode)</Channel>
+ </Mode>
+ <Mode Name="6 channels mode">
+  <Channel Number="0">Shutter</Channel>
+  <Channel Number="1">Dimmer</Channel>
+  <Channel Number="2">Dimmer fine</Channel>
+  <Channel Number="3">Functions (staying on desire option for 5 seconds)</Channel>
+  <Channel Number="4">Zoom</Channel>
+  <Channel Number="5">Zoom reset</Channel>
+ </Mode>
+ <Physical>
+  <Bulb Type="LED" Lumens="0" ColourTemperature="3000"/>
+  <Dimensions Weight="5.2" Width="214" Height="188" Depth="315"/>
+  <Lens Name="Fresnel" DegreesMin="17" DegreesMax="82"/>
+  <Focus Type="Fixed" PanMax="0" TiltMax="0"/>
+  <Technical PowerConsumption="150" DmxConnector="5-pin"/>
+ </Physical>
+</FixtureDefinition>
