@@ -4,7 +4,7 @@
  <Creator>
   <Name>Q Light Controller Plus</Name>
   <Version>4.12.3</Version>
-  <Author>Rodolphe Dejeunes</Author>
+  <Author>Rodolphe</Author>
  </Creator>
  <Manufacturer>Behringer</Manufacturer>
  <Model>X-Touch Compact</Model>
@@ -874,7 +874,7 @@
   <Name>Button B33 (MAIN)</Name>
   <Type>Button</Type>
   <ExtraPress>True</ExtraPress>
-  <Feedbacks UpperValue="4"/>
+  <Feedbacks UpperValue="6"/>
  </Channel>
  <Channel Number="232">
   <Name>Button B34 (REV)</Name>
@@ -898,6 +898,14 @@
  </Channel>
  <Channel Number="237">
   <Name>Button B39 (PLAY)</Name>
+  <Type>Button</Type>
+ </Channel>
+ <Channel Number="384">
+  <Name>Select Layer A</Name>
+  <Type>Button</Type>
+ </Channel>
+ <Channel Number="385">
+  <Name>Select Layer B</Name>
   <Type>Button</Type>
  </Channel>
 </InputProfile>
